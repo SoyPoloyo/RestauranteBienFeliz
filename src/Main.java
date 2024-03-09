@@ -105,8 +105,8 @@ public class Main {
 
     public static void ListarCocineros() {
         System.out.println("Listado de cocineros: ");
-        for (Cocinero c : cocineros) {
-            System.out.println(c);
+        for (Cocinero cocinero : cocineros) {
+            System.out.println(cocinero);
         }
     }
 
@@ -135,8 +135,8 @@ public class Main {
 
     public static void ListarPinches() {
         System.out.println("Listado de pinches: ");
-        for (Pinche p : pinches) {
-            System.out.println(p);
+        for (Pinche pinche : pinches) {
+            System.out.println(pinche);
         }
     }
 
