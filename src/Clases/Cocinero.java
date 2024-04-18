@@ -1,14 +1,19 @@
 package Clases;
 
+import java.util.ArrayList;
+import java.util.List;
 public class Cocinero extends Empleado{
 
      int tiempoDeServicio;
+     List<Pinche> pinches;
 
     // Constructor
     public Cocinero(int id, String nombre, String apellidos, String dni, String numeroSeguridadSocial, String telefonoFijo, String telefonoMovil, int tiempoDeServicio) {
         super(id, nombre, apellidos, dni, numeroSeguridadSocial, telefonoFijo, telefonoMovil);
         this.tiempoDeServicio = tiempoDeServicio;
+        this.pinches = new ArrayList<>();
     }
+
 
     // Getters y Setters
     public int getTiempoDeServicioo() {
@@ -16,6 +21,14 @@ public class Cocinero extends Empleado{
     }
     public void setTiempoDeServicio(int anosDeServicio) {
         this.tiempoDeServicio = anosDeServicio;
+    }
+
+    public List<Pinche> getPinches() {
+        return pinches;
+    }
+
+    public void addPinche(Pinche pinche) {
+        this.pinches.add(pinche);
     }
 
     @Override
@@ -29,6 +42,7 @@ public class Cocinero extends Empleado{
                 ", telefonoFijo='" + getTelefonoFijo() + '\'' +
                 ", telefonoMovil='" + getTelefonoMovil() + '\'' +
                 ", anosDeServicio=" + tiempoDeServicio +
+                ", pinches=" + pinches +
                 '}';
     }
 
